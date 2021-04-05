@@ -5,6 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { SuperTabsModule } from '@ionic-super-tabs/angular';
+import { ChattPageModule } from './chatt/chatt.module';
+import { StatusPageModule } from './status/status.module';
+import { CallsPageModule } from './calls/calls.module';
+
 
 
 @NgModule({
@@ -12,7 +17,11 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    SuperTabsModule,
+    ChattPageModule,
+    StatusPageModule,
+    CallsPageModule
   ],
   declarations: [HomePage]
 })

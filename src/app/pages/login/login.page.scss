@@ -1,0 +1,31 @@
+ion-content{
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #0000002e;
+  }
+  ion-button{
+    --ion-color-primary: #175f6b !important;
+    --ion-color-primary-contrast: #1f3d3e !important;
+    --background: linear-gradient( to bottom, var(--ion-color-primary) 0%, var(--ion-color-primary-contrast) 100% );
+    --color: white;
+    font-weight: 600;
+  }
+  ion-input{
+    --background: #244645bf;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+  .name{
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}

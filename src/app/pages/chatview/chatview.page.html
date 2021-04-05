@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-avatar slot="start">
+      <img src="https://image.flaticon.com/icons/png/512/147/147144.png">
+    </ion-avatar>
+    <ion-title>
+      Finn
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+  <ion-row *ngFor="let msg of messages">
+    <ion-col offset="3" size="9" *ngIf="currentUser === msg.user" class="message my-message">
+      <b> {{msg.user}} </b> <br>
+      <span> {{msg.msg}} </span>
+      <div class="time ion-text-right">
+        <br> {{msg.createdAt | date:'short'}}
+      </div>
+    </ion-col>
+
+    <ion-col size="9" *ngIf="currentUser !== msg.user" class="message other-message">
+      <b> {{msg.user}} </b><br>
+      <span> {{msg.msg}} </span>
+      <div class="time ion-text-right">
+        <br> {{msg.createdAt | date:'short'}}
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-item>
+      <ion-input placeholder="Enter your message"></ion-input>
+      <ion-icon name="send" slot="end"></ion-icon>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

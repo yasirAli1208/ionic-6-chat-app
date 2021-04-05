@@ -1,0 +1,16 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Profile Setup</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen style="--background: url('assets/img/background.jpg');">
+  <div class="centered">
+   <div class="img">
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    <ion-icon name="camera-outline"></ion-icon>
+   </div>
+    <ion-input placeholder="Name" mod="ios"></ion-input>
+    <ion-input placeholder="Birthdate" mod="ios"></ion-input>
+    <ion-button expand="block" [routerLink]="['home']">Continue</ion-button>
+  </div>
+</ion-content>

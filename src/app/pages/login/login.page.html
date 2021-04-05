@@ -1,0 +1,15 @@
+
+
+<ion-content style="--background: url('assets/img/background.jpg');">
+
+<div class="centered">
+
+  <div class="name">
+    ChatterBox
+  </div>
+  <ion-input type="tel" placeholder="Continue with mobile no" [(ngModel)]="number" minlength="11" maxlength="11"></ion-input>
+  <ion-button expand="block" (click)="presentModal(number)">Continue</ion-button>
+
+</div>
+
+</ion-content>
