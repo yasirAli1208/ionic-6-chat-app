@@ -12,8 +12,8 @@
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
     <ion-icon name="camera-outline"></ion-icon>
    </div>
-    <ion-input placeholder="Name" mod="ios"></ion-input>
-    <ion-input placeholder="Birthdate" mod="ios"></ion-input>
-    <ion-button expand="block" [routerLink]="['home']">Continue</ion-button>
+    <ion-input placeholder="Name" mod="ios" [(ngModel)]="name"></ion-input>
+    <ion-input placeholder="Birthdate" mod="ios" [(ngModel)]="birth"></ion-input>
+    <ion-button expand="block" (click)="updateUser(name,'userlogo.png',birth)">Continue</ion-button>
   </div>
 </ion-content>

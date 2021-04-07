@@ -20,19 +20,21 @@ export class LoginPage implements OnInit {
 
   async presentModal(number) {
     // this.router.navigate(['/login/afterlogin'], { relativeTo: number });
-    this.signUp(number,'','')
+    this.signUp(number,'','','')
   }
 
-  signUp(user_no, user_name, picture){
+  signUp(user_no, user_name, picture,bd){
     let signupObj = {
       user_no: user_no,
       user_name: user_name,
-      picture: picture
+      picture: picture,
+      birthdate:bd
     };
 
     this.http.postApi(this.http.api.signup, signupObj, true).then((res:any)=>{
       if(res.status == true){
-        this.general.presentToast(res.message);
+        // this.general.presentToast(res.message);
+        this.router.navigate(['/login/afterlogin',{state:user_no}])
       }
       else{
         this.general.presentToast(res.message);

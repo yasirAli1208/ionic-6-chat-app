@@ -18,6 +18,7 @@ globalUrl:string = 'http://localhost:8081';
 
 api = {
 	signup: '/signup',
+  userupdate: '/updateuser',
 }
 
   	postApi(link:string, data:any, loader:boolean){
